@@ -26,17 +26,17 @@ with open("requirements.txt", "r") as f:
         requirements.append(line.strip())
 git_nasbench301 = "git+https://github.com/automl/nasbench301@no_gin"
 
-try:
-    import nasbench301
-except ImportError:
-    print('Installing nasbench_pytorch')
-    if '--user' in sys.argv:
-        subprocess.run([sys.executable, '-m', 'pip', 'install', '--upgrade',
-            '--user', git_nasbench301], check=False)
-    else:
-        subprocess.run([sys.executable, '-m', 'pip', 'install', '--upgrade',
-            git_nasbench301], check=False)
-
+#try:
+#    import nasbench301
+#except ImportError:
+#    print('Installing nasbench_pytorch')
+#    if '--user' in sys.argv:
+#        subprocess.run([sys.executable, '-m', 'pip', 'install', '--upgrade',
+#            '--user', git_nasbench301], check=False)
+#    else:
+#        subprocess.run([sys.executable, '-m', 'pip', 'install', '--upgrade',
+#            git_nasbench301], check=False)
+#
 git_nasbench_pytorch = "git+https://github.com/romulus0914/NASBench-PyTorch@master"
 try:
     import nasbench_pytorch
